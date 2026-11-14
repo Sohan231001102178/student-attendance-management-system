@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAMS ERP // Student Attendance Management System (White Aurora & Colorful Effects)</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+              mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'Courier New', 'monospace'],
+            },
+            colors: {
+              status: {
+                present: '#10b981',    // Emerald Green
+                absent: '#ef4444',     // Crimson Red
+                internship: '#3b82f6', // Cobalt Blue (PL)
+                engagement: '#8b5cf6', // Royal Violet (E)
+                late: '#f59e0b',       // Amber
+              }
+            },
+            animation: {
+              'blob': 'blob 10s infinite',
+              'blob-slow': 'blob 16s infinite',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2.5s infinite linear',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.15)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+        background-color: #fafbfc;
+        color: #1e293b;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      /* Custom modern scrollbars */
+      ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+
+      /* White Glassmorphism Card with soft rainbow glow border */
+      .white-glass-card {
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 30px -5px rgba(100, 116, 139, 0.08), 
+                    0 4px 12px -2px rgba(99, 102, 241, 0.04),
+                    0 0 0 1px rgba(226, 232, 240, 0.7);
+      }
+
+      .white-glass-card:hover {
+        border-color: rgba(199, 210, 254, 0.8);
+        box-shadow: 0 16px 36px -6px rgba(99, 102, 241, 0.12),
+                    0 0 0 1px rgba(165, 180, 252, 0.6);
+      }
+
+      /* Colorful Aurora Ambient Background */
+      .aurora-bg {
+        background-color: #fbfcfe;
+        background-image: 
+          radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.14) 0px, transparent 55%),
+          radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.14) 0px, transparent 55%),
+          radial-gradient(at 50% 50%, rgba(14, 165, 233, 0.10) 0px, transparent 60%),
+          radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.12) 0px, transparent 55%),
+          radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.14) 0px, transparent 55%);
+        background-attachment: fixed;
+      }
+
+      .colorful-gradient-text {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 35%, #ec4899 70%, #06b6d4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .emerald-gradient-text {
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .crimson-gradient-text {
+        background: linear-gradient(135deg, #dc2626 0%, #f43f5e 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Tactile Spring button clicks */
+      .spring-btn {
+        transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.15s ease;
+      }
+      .spring-btn:active {
+        transform: scale(0.95);
+      }
+
+      /* Glow borders */
+      .glow-border-emerald {
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.18), inset 0 0 10px rgba(16, 185, 129, 0.05);
+      }
+      .glow-border-rose {
+        box-shadow: 0 0 15px rgba(239, 68, 68, 0.18), inset 0 0 10px rgba(239, 68, 68, 0.05);
+      }
+      .glow-border-blue {
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.18), inset 0 0 10px rgba(59, 130, 246, 0.05);
+      }
+      .glow-border-purple {
+        box-shadow: 0 0 15px rgba(139, 92, 246, 0.18), inset 0 0 10px rgba(139, 92, 246, 0.05);
+      }
+    </style>
+  </head>
+  <body class="aurora-bg text-slate-800 min-h-screen antialiased selection:bg-indigo-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
