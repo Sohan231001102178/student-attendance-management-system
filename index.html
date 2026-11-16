@@ -5,6 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAMS ERP // Student Attendance Management System (White Aurora & Colorful Effects)</title>
+    <!-- Auto-detection for VS Code Live Server (port 5500 / 5501) or static file preview -->
+    <script>
+      (function() {
+        var isLiveServer = window.location.port === '5500' || window.location.port === '5501' || window.location.protocol === 'file:';
+        if (isLiveServer && !window.location.pathname.includes('/dist/')) {
+          window.location.replace('./dist/index.html' + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
