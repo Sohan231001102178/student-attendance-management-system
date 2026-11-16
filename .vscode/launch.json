@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch SAMS ERP in Chrome",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "npm: dev - Start SAMS ERP Dev Server"
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Launch SAMS ERP in Edge",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "npm: dev - Start SAMS ERP Dev Server"
+    }
+  ]
+}
